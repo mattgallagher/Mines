@@ -48,6 +48,5 @@ private:
 	short			mNumMines;
 	long			mFinishTime, mGameLength;
 	short			*mMineField;
-	CMinesWindow	*mWindow;
-	Boolean			mInGame, mAutoStart, mUntimed;
+	Boolean		mInGame, mAutoStart, mUntimed;
 };

@@ -245,22 +245,19 @@ CMinesApp::ChooseDocument()
     typeListPtr = &typeList;
 	::NavGetFile( nil, &reply, nil, nil, nil, nil, &typeListPtr, nil);
 
-	// Activate the desktop.
-	::UDesktop::Activate();
-	
-	// Send an apple event to open the file.	
+	// Send an apple event to open the file.
     if( reply.validRecord )
     {
         AEDesc resultDesc;
-        OSErr the_sErr = noErr;
-			
-        //grab information about file for opening:	
-        if ((the_sErr = AEGetNthDesc( &(reply.selection),1, typeFSS, NULL, &resultDesc )) ==noErr)
+        OSErr sErr = AEGetNthDesc( &(reply.selection),1, typeFSS, NULL, &resultDesc );
+        if (sErr == noErr)
         {
 				FSSpec fspec;
-            the_sErr = AEGetDescData(&resultDesc, (void *)&fspec,sizeof(FSSpec));
-            if(the_sErr == noErr)
+            sErr = AEGetDescData(&resultDesc, (void *)&fspec, sizeof(FSSpec));
+            if(sErr == noErr)
+				{
                 AEDisposeDesc( &resultDesc );
+				}
 				SendAEOpenDoc( fspec );
         }    
 	}

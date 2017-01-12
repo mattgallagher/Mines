@@ -131,6 +131,26 @@ void CMinesView::DrawSquare( short picID, Rect &picRect )
 }
 
 //#############################
+// Offscreen views are normally transparent to clicks. Revert to LView behavior.
+//#############################
+void CMinesView::Click(SMouseDownEvent &inMouseDown)
+{
+	if (!inMouseDown.delaySelect) {
+			// Until now, whereLocal is actually in port coords. Now
+			// that we know what Pane is handling the click, we can
+			// convert it to the proper local coords.
+		PortToLocalPoint(inMouseDown.whereLocal);
+		UpdateClickCount(inMouseDown);
+			// A ControlSubPane is an implementation detail.
+			// Logically, we should executed the click attachments of
+			// the LControlView containing this pane.
+		if (mSuperView->ExecuteAttachments(msg_Click, &inMouseDown)) {
+			ClickSelf(inMouseDown);
+		}
+	}
+}
+
+//#############################
 // Handle a click in the minefield
 //#############################
 void CMinesView::ClickSelf(const SMouseDownEvent &mouseEvent)

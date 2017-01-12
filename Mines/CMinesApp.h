@@ -19,7 +19,7 @@ protected:
 	// Overridden internal methods
 	void					FindCommandStatus( CommandT inCommand,
 								Boolean &outEnabled, Boolean &outUsesMark,
-								Char16 &outMark, Str255 outName );
+								UInt16 &outMark, Str255 outName );
 	Boolean					ObeyCommand( CommandT inCommand, void *ioParam );
 	virtual void			OpenDocument( FSSpec *inMacFSSpec );
 	virtual LModelObject *	MakeNewDocument();

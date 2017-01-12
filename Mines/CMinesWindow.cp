@@ -35,23 +35,9 @@ CMinesWindow::CMinesWindow(LStream* inStream) :
 	short i=0;
 	while( i < mFieldWidth*mFieldHeight )
 	{
-		mMineField[i] = (kUntouchedSquare << 8) | kZeroMines;
+		mMineField[i] = kZeroMines;
 		i++;
 	}
-	AddMines( mNumMines );
-	
-	// Randomly select a square
-	short randNum, numSquares;
-	numSquares = mFieldWidth*mFieldHeight;
-	randNum = (Random()+32768.0)*(numSquares/65536.0);
-	while( (mMineField[randNum] & 0x00FF) != kZeroMines )
-	{
-		// Choose a different square if the one chosen is not empty
-		randNum = (Random()+32768.0)*(numSquares/65536.0);
-	}
-	
-	// Clear the square and display
-	ClearZeroSquare( randNum );
 }
 
 //#############################
@@ -174,7 +160,7 @@ Boolean CMinesWindow::ObeyCommand( CommandT inCommand, void *ioParam )
 // Update Menus
 //#############################
 void CMinesWindow::FindCommandStatus( CommandT inCommand, Boolean &outEnabled,
-	Boolean &outUsesMark, Char16 &outMark, Str255 outName )
+	Boolean &outUsesMark, UInt16 &outMark, Str255 outName )
 {
 	switch( inCommand )
 	{
@@ -496,14 +482,14 @@ void CMinesWindow::TrackClick( short h, short v, EventModifiers inModifiers )
 			if( (mMineField[theSquare] & 0xFF00) == (kUntouchedSquare << 8) )
 			{
 				// Mark this square protected
-				mMineField[theSquare] = mMineField[theSquare]&0x00FF
+				mMineField[theSquare] = (mMineField[theSquare] & 0x00FF)
 					| ( kProtectedSquare << 8 );
 				minesView->DrawSquare( kProtectedSquare, frameRect );
 			}
 			else
 			{
 				// Unmark this square
-				mMineField[theSquare] = mMineField[theSquare]&0x00FF
+				mMineField[theSquare] = (mMineField[theSquare] & 0x00FF)
 					| ( kUntouchedSquare << 8 );
 				minesView->DrawSquare( kUntouchedSquare, frameRect );
 			}

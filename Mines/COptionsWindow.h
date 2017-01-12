@@ -8,8 +8,8 @@
 
 // Message for directing the window to start a new game
 typedef struct NewGameOptionsMsg {
-	Int16	fieldSize;
-	Int16	numMines, gameLength;
+	SInt16	fieldSize;
+	SInt16	numMines, gameLength;
 	Boolean	autoStart, untimed;
 	short*	fieldData;
 } NewGameOptionsMsg;
@@ -29,13 +29,13 @@ public:
 
 private:
 	// Private methods
-	void	SwitchTabPane( Int32 value );
+	void	SwitchTabPane( SInt32 value );
 
 	// Private variables
 	LView	*mCurrentPanel;
 	
 	// Private Configuration options
 	Boolean	mAutoStart, mUntimed, mCustomDifficulty;
-	Int16	mNumMines, mGameSize, mGameTime, mDifficultyLevel;
-	Int16	mCurrentSize, mCurrentTime;
+	SInt16	mNumMines, mGameSize, mGameTime, mDifficultyLevel;
+	SInt16	mCurrentSize, mCurrentTime;
 };

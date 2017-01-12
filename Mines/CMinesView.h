@@ -24,8 +24,9 @@ public:
 
 protected:
 	// Overridden inherited method
-	virtual void		DrawSelf();
-	void				ClickSelf(const SMouseDownEvent &mouseEvent);
+	virtual void  	DrawSelf();
+	void		   	ClickSelf(const SMouseDownEvent &mouseEvent);
+	virtual void  	Click(SMouseDownEvent &inMouseDown);
 
 private:
 	void				LoadPictures();

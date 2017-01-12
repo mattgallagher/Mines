@@ -48,7 +48,8 @@ void COptionsWindow::FinishCreateSelf()
 	LWindow::FinishCreateSelf();
 	
 	// Find the window's screen rectangle
-	Rect	screenRect = (**(::GetGrayRgn())).rgnBBox;
+	Rect	screenRect;
+	::GetRegionBounds(::GetGrayRgn(), &screenRect);
 	Rect	windowRect = UWindows::GetWindowStructureRect( mMacWindowP );
 	
 	MoveWindowTo( screenRect.right - (windowRect.right - windowRect.left),
@@ -63,14 +64,14 @@ void COptionsWindow::FinishCreateSelf()
 	if ( tabPanel ) { tabPanel->AddListener ( this ); }
 	
 	// Display the contents of the tab region to the first panel
-	Int32 tabValue = 1;
+	SInt32 tabValue = 1;
 	ListenToMessage( msg_TabSwitch, &tabValue );
 }
 
 //#############################
 // Listen to the controls in this window
 //#############################
-void COptionsWindow::SwitchTabPane( Int32 value )
+void COptionsWindow::SwitchTabPane( SInt32 value )
 {
 	LPlaceHolder* panelHost = dynamic_cast<LPlaceHolder *>
 									(FindPaneByID(kOptionsPlaceHolder));
@@ -201,12 +202,12 @@ void COptionsWindow::SwitchTabPane( Int32 value )
 			untimedBox->SetValue( mUntimed );
 			
 			// Set the popup menu appropriately
-			Int16	menuItem = mNumMines;
+			SInt16	menuItem = mNumMines;
 			if( menuItem > 3 ) menuItem = 3;
 			numMinesBox->SetValue( menuItem );
 			
 			// Set the value of the text box correctly
-			Int16	numMines = mGameSize * mNumMines / 2;
+			SInt16	numMines = mGameSize * mNumMines / 2;
 			LStr255	text = numMines;
 			text = text + "\p mines";
 			LStaticText *numMinesText = dynamic_cast<LStaticText*>
@@ -272,13 +273,13 @@ Boolean COptionsWindow::ObeyCommand( CommandT inCommand, void *ioParam )
 //#############################
 void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 {
-	Int32 value;
+	SInt32 value;
 	
 	switch( inMessage )
 	{
 		case msg_TabSwitch:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			SwitchTabPane( value );
 		}
 		break;
@@ -303,26 +304,26 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 		
 		case msg_AutoStart:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			mAutoStart = value;
 		}
 		break;
 		
 		case msg_Untimed:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			mUntimed = value;
 		}
 		break;
 		
 		case msg_NumMines:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			mNumMines = value;
 			if( mNumMines == 3 ) mNumMines = 8;
 			
 			// Set the value of the text box correctly
-			Int16	numMines = mGameSize * mNumMines / 2;
+			SInt16	numMines = mGameSize * mNumMines / 2;
 			LStr255	text = numMines;
 			text = text + "\p mines";
 			LStaticText *numMinesText = dynamic_cast<LStaticText*>
@@ -333,7 +334,7 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 		
 		case msg_DifficultyLevel:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			if( value == Button_On )
 			{
 				mCustomDifficulty = false;
@@ -366,7 +367,7 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 				gameTimeButtons->Disable();
 				
 				// Send a message to change to the selected difficulty
-				Int32	level = mDifficultyLevel;
+				SInt32	level = mDifficultyLevel;
 				ListenToMessage( msg_Difficulty, &level );
 			}
 		}
@@ -376,7 +377,7 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 		{
 			if( mCustomDifficulty == false )
 			{
-				value = *(Int32 *) ioParam;
+				value = *(SInt32 *) ioParam;
 
 				// Recalculate the game dimensions for this new level
 				mDifficultyLevel = value;
@@ -449,7 +450,7 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 		
 		case msg_GameSize:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			mGameSize = value;
 
 			// Get the text displays
@@ -471,7 +472,7 @@ void COptionsWindow::ListenToMessage( MessageT inMessage, void *ioParam )
 		
 		case msg_GameTime:
 		{
-			value = *(Int32 *) ioParam;
+			value = *(SInt32 *) ioParam;
 			mGameTime = value;
 
 			// Get the text displays

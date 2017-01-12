@@ -3,12 +3,11 @@
 //##############################################################################
 
 // PowerPlant Classes included for registration
-//#include <UControlRegistry.h>
+#include <UControlRegistry.h>
 #include <LActiveScroller.h>
 #include <LBevelButton.h>
 #include <LAMBevelButtonImp.h>
 #include <LGABevelButtonImp.h>
-#include <UControlRegistry.h>
 
 // Macintosh header file for the call to RegisterAppearanceClient
 #include <Appearance.h>

@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_Requirements.h			PowerPlant 2.2.2	©2001-2005 Metrowerks Inc.
+//	PP_Requirements.h			PowerPlant 2.2.2	ï¿½2001-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	PowerPlant supports several different versions of Mac system software.

@@ -14,6 +14,10 @@
 #include <LStream.h>	// needed for EStreamFrom
 #include <LString.h>
 
+#ifndef __CONDITIONALMACROS__
+#error NOPE!
+#endif
+
 #include <ConditionalMacros.h>
 #include <Quickdraw.h>
 

@@ -130,7 +130,7 @@ void
 UOpenTptSupport::StartOpenTransport()
 {
     if (sCloseOpenTptTask == nil) {
-		ThrowIfError_(::InitOpenTransport());
+//		ThrowIfError_(::InitOpenTransport());
         sOTInitialized = true;
         sCloseOpenTptTask = new LOpenTpt_CloseOpenTpt;
     }
@@ -453,7 +453,7 @@ void
 LOpenTpt_CloseOpenTpt::DoCleanup()
 {
     if (UOpenTptSupport::sCloseOpenTptTask) {
-		::CloseOpenTransport();
+//		::CloseOpenTransport();
         UOpenTptSupport::sOTInitialized = false;
         UOpenTptSupport::sCloseOpenTptTask = nil;
 	}

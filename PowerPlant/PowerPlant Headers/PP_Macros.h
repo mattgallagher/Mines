@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_Macros.h					PowerPlant 2.2.5	©1993-2005 Metrowerks Inc.
+//	PP_Macros.h					PowerPlant 2.2.5	ï¿½1993-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	Macro definitions for controlling conditional compilation options
@@ -54,11 +54,11 @@
 		#define __MACH__	0
 	#endif
 
-	#if __MACH__
-		#include <ansi_prefix.mach.h>
-	#else
+//	#if __MACH__
+//		#include <ansi_prefix.mach.h>
+//	#else
 		#define __dest_os  __mac_os
-	#endif
+//	#endif
 #endif
 
 
@@ -99,8 +99,8 @@
 
 #if PP_Uses_Std_Namespace
 	#define PP_Using_Namespace_Std			using namespace std;
-	#define PP_STD							_STD
-	#define PP_CSTD							_CSTD
+	#define PP_STD							std
+	#define PP_CSTD
 #else
 	#define PP_Using_Namespace_Std
 	#define PP_STD

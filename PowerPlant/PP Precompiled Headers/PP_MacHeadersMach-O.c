@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_MacHeadersMach-O.c		PowerPlant 2.2.2	©1995-2005 Metrowerks Inc.
+//	PP_MacHeadersMach-O.c		PowerPlant 2.2.2	ï¿½1995-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	A variation of the standard MacHeaders.c designed for use with
@@ -16,9 +16,6 @@
  *  modification.
  */
 
-#ifndef __NOEXTENSIONS__
-	#define __NOEXTENSIONS__
-#endif
 #ifndef __CF_USE_FRAMEWORK_INCLUDES__
 	#define __CF_USE_FRAMEWORK_INCLUDES__
 #endif

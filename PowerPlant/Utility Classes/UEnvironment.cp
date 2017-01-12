@@ -97,7 +97,8 @@ void
 UEnvironment::InitEnvironment()
 {
 										// Get OS version
-	::Gestalt(gestaltSystemVersion, &sEnvironInfo.sysVersion);
+//	::Gestalt(gestaltSystemVersion, &sEnvironInfo.sysVersion);
+	sEnvironInfo.sysVersion = 4242;
 	
 										// Check for the Appearance Manager
 	SetFeature(env_HasAppearance,

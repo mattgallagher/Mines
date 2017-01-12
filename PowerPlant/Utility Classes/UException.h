@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	UException.h				PowerPlant 2.2.2	©1994-2005 Metrowerks Inc.
+//	UException.h				PowerPlant 2.2.2	ï¿½1994-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	Useful macros for throwing exceptions. The macros throw and exception

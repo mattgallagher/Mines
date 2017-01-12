@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	LControlPane.h				PowerPlant 2.2.2	©1997-2005 Metrowerks Inc.
+//	LControlPane.h				PowerPlant 2.2.2	ï¿½1997-2005 Metrowerks Inc.
 // ===========================================================================
 
 #ifndef _H_LControlPane

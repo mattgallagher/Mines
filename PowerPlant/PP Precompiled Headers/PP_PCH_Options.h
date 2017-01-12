@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_PCH_Options.h			PowerPlant 2.2.2	©1997-2005 Metrowerks Inc.
+//	PP_PCH_Options.h			PowerPlant 2.2.2	ï¿½1997-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	This file is #include'd by the standard PowerPlant prefix files to check
@@ -22,7 +22,7 @@
 //	option. If for some reason you don't wish to do this, you should make
 //	your own precompiled header file with the "bool" option off.
 
-#if !__option(bool)
+#if 0
 	#ifdef __cplusplus
 	#warning Settings mismatch: PCH has bool ON, Project has bool OFF
 	#endif

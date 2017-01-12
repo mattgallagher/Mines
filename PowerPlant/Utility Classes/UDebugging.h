@@ -94,7 +94,7 @@
 
 #include <PP_Types.h>
 #include <LException.h>
-#include <TextUtils.h>
+//#include <TextUtils.h>
 
 #if PP_Uses_Pragma_Import
 	#pragma import on

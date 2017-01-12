@@ -56,6 +56,7 @@
 //			#define PP_Suppress_Notes_225	1
 //		in your prefix file or edit the !PP_Notes_225.txt file
 
+#define PP_Suppress_Notes_225 1
 #if !PP_Suppress_Notes_225
 	#include "!PP_Notes_225.txt"
 #endif

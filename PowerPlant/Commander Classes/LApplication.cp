@@ -31,7 +31,7 @@
 #include <new>
 
 #include <AEObjects.h>
-#include <Devices.h>
+//#include <Devices.h>
 #include <Dialogs.h>
 #include <LowMem.h>
 

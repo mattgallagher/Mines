@@ -16,7 +16,6 @@
 #include <Dialogs.h>
 #include <Processes.h>
 
-
 // ---------------------------------------------------------------------------
 //	Automatic release notes via compiler warning messages
 //
@@ -24,6 +23,7 @@
 //			#define PP_Suppress_Notes_225	1
 //		in your prefix file or edit the !PP_Notes_225.txt file
 
+#define PP_Suppress_Notes_225 1
 #if !PP_Suppress_Notes_225
 	#include "!PP_Notes_225.txt"
 #endif

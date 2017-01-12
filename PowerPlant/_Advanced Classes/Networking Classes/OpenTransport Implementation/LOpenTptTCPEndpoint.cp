@@ -501,14 +501,13 @@ LOpenTptTCPEndpoint::AcceptIncoming(LTCPEndpoint* 	inEndpoint)
 				break;
 
 			case kOTLookErr:
-			{
 				OSStatus lookValue = ::OTLook(GetEndpointRef());
 				if ((lookValue == T_LISTEN) || (lookValue == T_DISCONNECT))
 					ClearListenEvents();
 				else
 					Throw_(lookValue);
 				break;
-			}
+
 			case kOTIndOutErr:
 				ClearListenEvents();
 				result = kOTLookErr;	//just forces us to try again

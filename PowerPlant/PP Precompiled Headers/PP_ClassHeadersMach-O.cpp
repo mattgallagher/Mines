@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_ClassHeadersMach-O.pch++	PowerPlant 2.2.2	©2001-2005 Metrowerks Inc.
+//	PP_ClassHeadersMach-O.pch++	PowerPlant 2.2.2	ï¿½2001-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	Source for precompiled header for PowerPlant headers
@@ -21,18 +21,5 @@
 #define TARGET_API_MAC_OS8		PP_Target_Classic
 #define TARGET_API_MAC_OSX		PP_Target_Carbon
 
-#if __POWERPC__
-	#if _MSL_USING_MW_C_HEADERS
-		#pragma precompile_target "PP_MSLClassHeadersMach-O++"
-	#else
-		#pragma precompile_target "PP_ClassHeadersMach-O++"
-	#endif
-
-#else
-	#error Compile only for PPC targets
-#endif
-
-	// Include the actual header files ...
-
-#pragma once on
+#pragma once
 #include "PP_ClassHeaders.cp"

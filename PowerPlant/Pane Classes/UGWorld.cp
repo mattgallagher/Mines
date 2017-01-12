@@ -119,7 +119,7 @@ StOffscreenGWorld::StOffscreenGWorld(
 		// for drawing by setting the coordinate system, locking
 		// its pixels, setting the background color, and erasing.
 
-	ThemeDrawingState	themeState;
+	ThemeDrawingState	themeState = NULL;
 	if (inBackColor == nil) {
 		UAppearance::GetThemeDrawingState(&themeState);
 	}

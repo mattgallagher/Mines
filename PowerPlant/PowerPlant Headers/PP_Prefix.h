@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_Prefix.h					PowerPlant 2.2.2	©1993-2005 Metrowerks Inc.
+//	PP_Prefix.h					PowerPlant 2.2.2	ï¿½1993-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	To insure that PowerPlant and compiler options are set properly,
@@ -23,5 +23,8 @@
 #include <PP_Types.h>
 #include <PP_Constants.h>
 #include <UException.h>
+
+#include <CoreServices/CoreServices.h>
+#include <Carbon/Carbon.h>
 
 #endif

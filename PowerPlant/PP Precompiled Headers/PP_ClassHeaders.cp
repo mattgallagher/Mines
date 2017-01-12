@@ -1,8 +1,8 @@
-// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Copyright ï¿½2005, 2006 Freescale Semiconductor, Inc.
 // Please see the License for the specific language governing rights and
 // limitations under the License.
 // ===========================================================================
-//	PP_ClassHeaders.cp			PowerPlant 2.2.2	©1995-2005 Metrowerks Inc.
+//	PP_ClassHeaders.cp			PowerPlant 2.2.2	ï¿½1995-2005 Metrowerks Inc.
 // ===========================================================================
 //
 //	Source for precompiled header for PowerPlant headers
@@ -11,7 +11,7 @@
 //	as well as most of the Toolbox headers used by the PowerPlant library.
 
 #if __MACH__
-	#include <PP_MacHeadersMach-O.c>			// Toolbox headers
+	#include "PP_MacHeadersMach-O.c"			// Toolbox headers
 #else
 #include <PP_MacHeaders.c>			// Toolbox Headers
 #endif

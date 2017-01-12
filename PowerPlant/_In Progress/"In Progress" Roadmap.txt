@@ -1,0 +1,94 @@
+// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Please see the License for the specific language governing rights and
+// limitations under the License.
+========================================================================
+Roadmap for PowerPlant "In Progress" Classes
+========================================================================
+
+Version: PowerPlant 2.2.2
+Date:    July 31, 2002
+========================================================================
+
+The "_In Progress" folder in the PowerPlant folder contains classes
+that aren't ready for prime time. This document describes the current
+state of these classes.
+
+
+========================================================================
+Classes
+========================================================================
+
+Carbon Events
+-------------
+Classes for supporting Carbon Events
+
+Status:		Experimental.
+
+Comment:	These classes were a proof-of-concept. Carbon Events are
+			fully supported in PowerPlantX
+
+
+Constructor Additions
+---------------------
+Classes used internally in the Constructor view editor
+
+Status:		Work reliably
+
+
+Contextual Menus
+----------------
+Classes for supporting contextual menus
+
+Status:		Work OK
+
+
+Core Foundation
+---------------
+Wrapper classes for Apple's Core Foundation API
+
+Status:		They work, but have not been tested much.
+
+
+Debugging Classes
+-----------------
+Debugging utilities
+
+Status:		Work OK
+
+
+Menu Utilities
+--------------
+Wrapper classes for the Menu Manager which support both the old and
+new APIs. The Appearance Manager version 1.0 added a few new calls, and
+version 1.1 in Mac OS 8.5 added more.
+
+Status:		They work, but have not been tested much.
+
+
+Page Controller Classes
+-----------------------
+Classes for implementing the page tabs formerly used in Constructor
+and the IDE
+
+Status:		Work Reliably
+
+
+StuffIt Classes
+---------------
+Classes for dealing with StuffIt archives. StuffIt is a compression
+utility from Aladdin Systems.
+
+Status:		They work, but have not been tested much.
+
+
+Table Classes
+-------------
+Varieties of Tables
+
+Status:		Mixed. Some work OK, others are a bit buggy and unfinished.
+
+Comment:	The "More Table Classes" were contributed by Andy Dent, who
+			does work on AppMaker (by Bowers Development). Thanks, Andy.
+
+			There's a new sample project in the PP Examples folder that
+			uses the More Table Classes.

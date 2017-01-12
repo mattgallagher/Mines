@@ -1,0 +1,30 @@
+// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Please see the License for the specific language governing rights and
+// limitations under the License.
+// ===========================================================================
+//	PP_MacHeadersCarbon.pch++	PowerPlant 2.2.2	©2000-2005 Metrowerks Inc.
+// ===========================================================================
+//
+//	Source for precompiled header for PowerPlant headers
+//
+//	This file #includes most of the Toolbox headers used by PowerPlant.
+
+
+	// This file works only for Carbon.
+
+#define PP_Target_Carbon		1
+
+#define PP_Target_Classic		(!PP_Target_Carbon)
+
+#define TARGET_API_MAC_CARBON	PP_Target_Carbon
+#define TARGET_API_MAC_OS8		PP_Target_Classic
+
+#if __POWERPC__
+	#pragma precompile_target "PP_MacHeadersCarbon++"
+
+#else
+	#error Compile only for PPC targets
+#endif
+
+#pragma once on
+#include "PP_MacHeaders.c"

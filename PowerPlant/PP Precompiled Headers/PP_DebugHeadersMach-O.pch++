@@ -1,0 +1,37 @@
+// Copyright ©2005, 2006 Freescale Semiconductor, Inc.
+// Please see the License for the specific language governing rights and
+// limitations under the License.
+// ===========================================================================
+//	PP_DebugHeadersMach-O.pch++		PowerPlant 2.2.2 ©2001-2005 Metrowerks Inc.
+// ===========================================================================
+//
+//	Source for precompiled header for PowerPlant headers
+//
+//	This file #includes most header files for the PowerPlant library,
+//	as well as most of the Toolbox headers used by the PowerPlant library
+//	with all debugging symbols defined.
+
+
+	// This file works only for Mach-O.
+
+#define PP_Target_Carbon		1
+
+#define PP_Target_Classic		(!PP_Target_Carbon)
+
+#define TARGET_API_MAC_CARBON	PP_Target_Carbon
+#define TARGET_API_MAC_OS8		PP_Target_Classic
+#define TARGET_API_MAC_OSX		PP_Target_Carbon
+
+#if __POWERPC__
+	#if _MSL_USING_MW_C_HEADERS
+		#pragma precompile_target "PP_MSLDebugHeadersMach-O++"
+	#else
+		#pragma precompile_target "PP_DebugHeadersMach-O++"
+	#endif
+
+#else
+	#error Compile only for PPC targets
+#endif
+
+#pragma once on
+#include "PP_DebugHeaders.cp"

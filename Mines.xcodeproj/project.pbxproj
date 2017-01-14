@@ -693,22 +693,6 @@
 		C9B3B53D1E22465C00B98E2C /* UWindows.cp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UWindows.cp; sourceTree = "<group>"; };
 		C9B3B53E1E22465C00B98E2C /* UWindows.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWindows.h; sourceTree = "<group>"; };
 		C9B3B6B51E2247AA00B98E2C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		C9B3B6B81E22498400B98E2C /* Aliases.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Aliases.h; sourceTree = "<group>"; };
-		C9B3B6B91E22498400B98E2C /* AssertMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AssertMacros.h; sourceTree = "<group>"; };
-		C9B3B6BA1E22498400B98E2C /* Availability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Availability.h; sourceTree = "<group>"; };
-		C9B3B6BB1E22498400B98E2C /* AvailabilityInternal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AvailabilityInternal.h; sourceTree = "<group>"; };
-		C9B3B6BD1E22498400B98E2C /* ConditionalMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConditionalMacros.h; sourceTree = "<group>"; };
-		C9B3B6BE1E22498400B98E2C /* DateTimeUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateTimeUtils.h; sourceTree = "<group>"; };
-		C9B3B6BF1E22498400B98E2C /* Files.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Files.h; sourceTree = "<group>"; };
-		C9B3B6C01E22498400B98E2C /* Finder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Finder.h; sourceTree = "<group>"; };
-		C9B3B6C11E22498400B98E2C /* MacErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacErrors.h; sourceTree = "<group>"; };
-		C9B3B6C21E22498400B98E2C /* MacMemory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacMemory.h; sourceTree = "<group>"; };
-		C9B3B6C31E22498400B98E2C /* MacTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacTypes.h; sourceTree = "<group>"; };
-		C9B3B6C41E22498400B98E2C /* MixedMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixedMode.h; sourceTree = "<group>"; };
-		C9B3B6C51E22498400B98E2C /* OSUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSUtils.h; sourceTree = "<group>"; };
-		C9B3B6C61E22498400B98E2C /* TargetConditionals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetConditionals.h; sourceTree = "<group>"; };
-		C9B3B6C71E22498400B98E2C /* TextCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextCommon.h; sourceTree = "<group>"; };
-		C9B3B6C81E22498400B98E2C /* UTCUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UTCUtils.h; sourceTree = "<group>"; };
 		C9B3B6C91E224A9300B98E2C /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		C9D8EAB61E2493480043BCA1 /* Mines.r */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; lineEnding = 1; path = Mines.r; sourceTree = "<group>"; };
 		C9D8EABA1E249D160043BCA1 /* Mines.rsrc */ = {isa = PBXFileReference; lastKnownFileType = archive.rsrc; path = Mines.rsrc; sourceTree = "<group>"; };
@@ -932,7 +916,6 @@
 			children = (
 				C9B3AFF81E21E1FE00B98E2C /* Mines */,
 				C9B3B1E61E22465B00B98E2C /* PowerPlant */,
-				C9B3B6B71E22498400B98E2C /* CarbonHeaders */,
 				C9B3AFF71E21E1FE00B98E2C /* Products */,
 				C9B3B1D61E21EACC00B98E2C /* Frameworks */,
 			);
@@ -1629,29 +1612,6 @@
 				C9B3B53E1E22465C00B98E2C /* UWindows.h */,
 			);
 			path = "Utility Classes";
-			sourceTree = "<group>";
-		};
-		C9B3B6B71E22498400B98E2C /* CarbonHeaders */ = {
-			isa = PBXGroup;
-			children = (
-				C9B3B6B81E22498400B98E2C /* Aliases.h */,
-				C9B3B6B91E22498400B98E2C /* AssertMacros.h */,
-				C9B3B6BA1E22498400B98E2C /* Availability.h */,
-				C9B3B6BB1E22498400B98E2C /* AvailabilityInternal.h */,
-				C9B3B6BD1E22498400B98E2C /* ConditionalMacros.h */,
-				C9B3B6BE1E22498400B98E2C /* DateTimeUtils.h */,
-				C9B3B6BF1E22498400B98E2C /* Files.h */,
-				C9B3B6C01E22498400B98E2C /* Finder.h */,
-				C9B3B6C11E22498400B98E2C /* MacErrors.h */,
-				C9B3B6C21E22498400B98E2C /* MacMemory.h */,
-				C9B3B6C31E22498400B98E2C /* MacTypes.h */,
-				C9B3B6C41E22498400B98E2C /* MixedMode.h */,
-				C9B3B6C51E22498400B98E2C /* OSUtils.h */,
-				C9B3B6C61E22498400B98E2C /* TargetConditionals.h */,
-				C9B3B6C71E22498400B98E2C /* TextCommon.h */,
-				C9B3B6C81E22498400B98E2C /* UTCUtils.h */,
-			);
-			path = CarbonHeaders;
 			sourceTree = "<group>";
 		};
 		C9EA923B1E228C3300DC3471 /* _In Progress */ = {
